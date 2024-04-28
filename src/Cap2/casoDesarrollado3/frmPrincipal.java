@@ -4,6 +4,7 @@
  */
 package Cap2.casoDesarrollado3;
 
+import java.text.NumberFormat;
 import javax.swing.JOptionPane;
 
 /**
@@ -31,6 +32,24 @@ public class frmPrincipal extends javax.swing.JFrame {
         cmdSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         cmdCalcular = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        cboMoneda = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        cboBien = new javax.swing.JComboBox<>();
+        txtMeses = new javax.swing.JTextField();
+        txtBien = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        lblTasa = new javax.swing.JLabel();
+        lblInicial = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        lblRiesgo = new javax.swing.JLabel();
+        lblCuotaInicial = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        lblPagoMensual = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,6 +70,40 @@ public class frmPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setText("Tipo de Moneda");
+
+        cboMoneda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pesos", "Dolares" }));
+
+        jLabel3.setText("Tipo de Bien");
+
+        jLabel4.setText("Plazo a Meses");
+
+        jLabel5.setText("Valor del Bien");
+
+        cboBien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Auto", "Vivienda", "Otro" }));
+
+        jLabel6.setText("Tasa de Interes");
+
+        jLabel7.setText("Cuota Inicial");
+
+        lblTasa.setText("12.00");
+
+        lblInicial.setText("20.00");
+
+        jLabel8.setText("Cuota Inicial");
+
+        jLabel9.setText("Riesgo Neto");
+
+        lblRiesgo.setText("-----");
+
+        lblCuotaInicial.setText("-----");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel10.setText("PAGO MENSUAL");
+
+        lblPagoMensual.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblPagoMensual.setText("-----");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -58,14 +111,51 @@ public class frmPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(172, 172, 172)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(109, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cmdCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmdCalcular, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblPagoMensual, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cmdSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 663, Short.MAX_VALUE)
-                        .addComponent(cmdSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel2)
+                                            .addComponent(jLabel3))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(cboBien, 0, 248, Short.MAX_VALUE)
+                                            .addComponent(cboMoneda, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txtMeses)
+                                            .addComponent(txtBien)))
+                                    .addComponent(jLabel5))
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7))
+                                .addGap(28, 28, 28)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblInicial)
+                                    .addComponent(lblTasa)))
+                            .addComponent(jLabel4)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabel9)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lblRiesgo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(jLabel8)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lblCuotaInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -73,10 +163,42 @@ public class frmPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(cboMoneda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(cboBien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtMeses, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(lblTasa))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtBien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(lblInicial))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(cmdCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(cmdSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(lblCuotaInicial))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(lblRiesgo))
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmdSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel10)
+                        .addComponent(lblPagoMensual)))
                 .addContainerGap())
         );
 
@@ -92,7 +214,37 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     private void cmdCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdCalcularActionPerformed
         //Simulacion
-        JOptionPane.showMessageDialog(null, "Hola");
+        
+        //Clase para dar formato de importe $$
+        NumberFormat fImporte = NumberFormat.getCurrencyInstance();
+        //Instanciar la clase prestamo
+        Prestamo objP = new Prestamo();
+        
+        //Obtener los valores del formulario
+        objP.setMoneda(String.valueOf(cboMoneda.getSelectedItem()));
+        objP.setBien(String.valueOf(cboBien.getSelectedItem()));
+        objP.setMeses(Integer.parseInt(txtMeses.getText()));
+        objP.setTasa(Double.parseDouble(lblTasa.getText()));
+        objP.setInicial(Double.parseDouble(lblInicial.getText()));
+        objP.setValor(Double.parseDouble(txtBien.getText()));
+        
+        //realizar calculos
+        double cuotaInicial = objP.calculaCuotaInicial();
+        double riesgo = objP.calcularRiesgo();
+        double cuotaMensual = objP.calculaCuotaMensual();
+        
+        //imprimiendo resultaods
+        lblCuotaInicial.setText(fImporte.format(cuotaInicial)+" " + objP.getMoneda());
+        lblRiesgo.setText(fImporte.format(riesgo)+" " + objP.getMoneda());
+        lblPagoMensual.setText(fImporte.format(cuotaMensual)+" " + objP.getMoneda());
+        
+        //forma anterior para el formato
+        //lblPagoMensual.setText(String.format("%.2f", cuotaMensual)+" " + objP.getMoneda());
+        
+        
+        
+        
+        JOptionPane.showMessageDialog(null, "Solicitud Realizada");
         
     }//GEN-LAST:event_cmdCalcularActionPerformed
 
@@ -132,8 +284,26 @@ public class frmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cboBien;
+    private javax.swing.JComboBox<String> cboMoneda;
     private javax.swing.JButton cmdCalcular;
     private javax.swing.JButton cmdSalir;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lblCuotaInicial;
+    private javax.swing.JLabel lblInicial;
+    private javax.swing.JLabel lblPagoMensual;
+    private javax.swing.JLabel lblRiesgo;
+    private javax.swing.JLabel lblTasa;
+    private javax.swing.JTextField txtBien;
+    private javax.swing.JTextField txtMeses;
     // End of variables declaration//GEN-END:variables
 }
