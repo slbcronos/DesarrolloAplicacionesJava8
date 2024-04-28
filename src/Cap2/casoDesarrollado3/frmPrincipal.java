@@ -82,6 +82,18 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         cboBien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Auto", "Vivienda", "Otro" }));
 
+        txtMeses.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMesesKeyTyped(evt);
+            }
+        });
+
+        txtBien.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtBienKeyTyped(evt);
+            }
+        });
+
         jLabel6.setText("Tasa de Interes");
 
         jLabel7.setText("Cuota Inicial");
@@ -220,7 +232,12 @@ public class frmPrincipal extends javax.swing.JFrame {
         //Instanciar la clase prestamo
         Prestamo objP = new Prestamo();
         
-        //Obtener los valores del formulario
+        if (txtBien.getText().isEmpty()|| txtMeses.getText().isEmpty()) {
+            //si vacio
+            JOptionPane.showMessageDialog(null, "Se requieren Datos");
+            
+        } else {
+                    //Obtener los valores del formulario
         objP.setMoneda(String.valueOf(cboMoneda.getSelectedItem()));
         objP.setBien(String.valueOf(cboBien.getSelectedItem()));
         objP.setMeses(Integer.parseInt(txtMeses.getText()));
@@ -245,8 +262,47 @@ public class frmPrincipal extends javax.swing.JFrame {
         
         
         JOptionPane.showMessageDialog(null, "Solicitud Realizada");
+            
+            
+        }
+        
+
         
     }//GEN-LAST:event_cmdCalcularActionPerformed
+
+    private void txtMesesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMesesKeyTyped
+        // Caracteres aceptados por el text
+        // Solo numeros y punto
+        int key = evt.getKeyChar();
+
+        boolean numeros = key >= 46 && key <= 57;
+
+        if (!numeros)
+        {
+            evt.consume();
+        }
+
+        if (txtMeses.getText().trim().length() == 10) {
+            evt.consume();
+        }     
+    }//GEN-LAST:event_txtMesesKeyTyped
+
+    private void txtBienKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBienKeyTyped
+                // Caracteres aceptados por el text
+        // Solo numeros y punto
+        int key = evt.getKeyChar();
+
+        boolean numeros = key >= 46 && key <= 57;
+
+        if (!numeros)
+        {
+            evt.consume();
+        }
+
+        if (txtBien.getText().trim().length() == 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtBienKeyTyped
 
     /**
      * @param args the command line arguments

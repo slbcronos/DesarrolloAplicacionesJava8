@@ -217,8 +217,14 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMeses">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtMesesKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtBien">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtBienKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
